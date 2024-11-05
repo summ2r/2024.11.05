@@ -10,18 +10,17 @@ function setup() {
 function draw() {
   background(220);
 
-  if (mouseIsPressed) {
-    let hit = createVector(-0.1, -0.1);
-    ball.addForce(hit)
-  }
+  // let took = createVector();
+  ball.pos
+  let mv = createVector(mouseX, mouseY);
 
 //   let gravity = createVector(0, 0.3);
-//   ball.addForce(gravity);
+//   ball.addForce(gravity); 중력
 
 //  if (mouseIsPressed) {
 //    let wind = createVector(0.1, 0);
 //    ball.addForce(wind);
-//  }
+//  } 바람
 
   ball.update();
   ball.show();
