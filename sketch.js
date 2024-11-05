@@ -22,8 +22,9 @@ function draw() {
   ball.show();
 }
 
-function mouseClicked () {
+function mouseIsClicked () {
   let mv = createVector(mouseX, mouseY);
   let took = p5.Vector.sub(ball.pos, mPos);
+  took.mult(0.1);
   ball.addForce(took);
 }

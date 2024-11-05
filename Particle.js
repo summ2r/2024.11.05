@@ -15,34 +15,35 @@ class Particle {
     update() {
       this.vel.add(this.acc);
       this.pos.add(this.vel);
-  
+    
+      this.vel.mult(0.95);
       this.acc.set(0, 0);
       this.checkEdge();
     }
   
 
     checkEdge() {
-      // if ((this.pos.y+this.w/2) > height) {
-      //   this.pos.y = height-this.w/2;
-      //   this.vel.y = this.vel.y * -1;
-      // }
+      if ((this.pos.y+this.w/2) > height) {
+        this.pos.y = height-this.w/2;
+        this.vel.y = this.vel.y * -1;
+      }
       
-      // if (this.pos.x > width) {
-      //   this.pos.x = 0;
-      // }
+      if (this.pos.x > width) {
+        this.pos.x = 0;
+      }
       
-      if (this.pos.x + this.w/2 > width) {
-        this.vel.x = this.vel.x * -0.5;
-      }
-      if (this.pos.x - this.w/2 < 0) {
-        this.vel.x = this.vel.x * -0.5;
-      }
-      if (this.pos.y + this.w/2 > height) {
-        this.vel.y = this.vel.y* -0.5;
-      }
-      if (this.pos.y - this.w/2 < 0) {
-        this.vel.y = this.vel.y* -0.5;
-      }
+      // if (this.pos.x + this.w/2 > width) {
+      //   this.vel.x = this.vel.x * -0.5;
+      // }
+      // if (this.pos.x - this.w/2 < 0) {
+      //   this.vel.x = this.vel.x * -0.5;
+      // }
+      // if (this.pos.y + this.w/2 > height) {
+      //   this.vel.y = this.vel.y* -0.5;
+      // }
+      // if (this.pos.y - this.w/2 < 0) {
+      //   this.vel.y = this.vel.y* -0.5;
+      // }
     }
   
   
