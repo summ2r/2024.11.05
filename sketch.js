@@ -10,6 +10,11 @@ function setup() {
 function draw() {
   background(220);
 
+  if (mouseIsPressed) {
+    let hit = createVector(-0.1, -0.1);
+    ball.addForce(hit)
+  }
+
 //   let gravity = createVector(0, 0.3);
 //   ball.addForce(gravity);
 
