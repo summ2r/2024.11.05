@@ -10,10 +10,6 @@ function setup() {
 function draw() {
   background(220);
 
-  // let took = createVector();
-  ball.pos
-  let mv = createVector(mouseX, mouseY);
-
 //   let gravity = createVector(0, 0.3);
 //   ball.addForce(gravity); 중력
 
@@ -24,4 +20,10 @@ function draw() {
 
   ball.update();
   ball.show();
+}
+
+function mouseClicked () {
+  let mv = createVector(mouseX, mouseY);
+  let took = p5.Vector.sub(ball.pos, mPos);
+  ball.addForce(took);
 }
